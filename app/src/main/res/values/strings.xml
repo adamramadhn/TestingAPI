@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TestingAPI</string>
+    <string name="popular_movie">Popular Movie</string>
+</resources>
