@@ -1,15 +1,24 @@
 package com.example.testingapi.api
 
 import com.example.testingapi.model.Post
+import com.example.testingapi.model.Post2
+import retrofit2.Call
 import retrofit2.Response
-import retrofit2.http.GET
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface SimpleApi {
 
-    @GET("movie/latest")
-    suspend fun getPost(
-        @Query("api_key") api_key: String
-    ): Response<Post>
+    @GET("Testing_API")
+    fun getPost(): Call<ArrayList<Post>>
+
+    @GET("api/train/")
+    fun getPost2(): Call<ArrayList<Post>>
+
+    @FormUrlEncoded
+    @POST("api/prediction/")
+    fun post(
+        @Field("age")userId:Int,
+        @Field("id")theId:Int,
+    ): Call<Post2>
 
 }

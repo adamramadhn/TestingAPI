@@ -5,7 +5,6 @@
     android:id="@+id/cv_item_course"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     app:cardCornerRadius="20dp"
     app:cardElevation="4dp"
     app:cardMaxElevation="4dp"
